@@ -265,6 +265,7 @@
             this.RegisterButton2.TabIndex = 16;
             this.RegisterButton2.Text = "REGISTER";
             this.RegisterButton2.UseVisualStyleBackColor = true;
+            this.RegisterButton2.Click += new System.EventHandler(this.RegisterButton2_Click);
             // 
             // FrmRegistration
             // 
@@ -297,6 +298,7 @@
             this.Name = "FrmRegistration";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmRegistration_Load);
+            this.ResumeLayout(false);
             this.PerformLayout();
 
         }

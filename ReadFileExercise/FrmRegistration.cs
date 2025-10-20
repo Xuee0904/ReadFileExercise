@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,5 +47,34 @@ namespace ReadFileExercise
         {
             this.BackColor = ColorTranslator.FromHtml("#F3F3F3");
         }
+
+        private void RegisterButton2_Click(object sender, EventArgs e)
+        {
+            string studentNumber = StudentNoText.Text;
+            string lastName = LastNameText.Text;
+            string firstName = FirstNameText.Text;
+            string middlaName = MiddleNameText.Text;
+            string contactNumber = ContactNoText.Text;
+            string age = AgeText.Text;
+            string birthday = BirthdayPicker.Value.ToString("yyyy-MM-dd");
+            string program = ProgramCombo.Text;
+            string Gender = GenderCombo.Text;
+
+            string relativePath = @"..\..\ReadFileStorage";
+            string docPath = Path.GetFullPath(relativePath);
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, studentNumber + ".txt")))
+            {
+                outputFile.WriteLine("Student Number: " + studentNumber);
+                outputFile.WriteLine("Full Name: " + lastName + ", " + firstName + " " + middlaName);
+                outputFile.WriteLine("Program: " + program);
+                outputFile.WriteLine("Gender: " + Gender);
+                outputFile.WriteLine("Age: " + age);
+                outputFile.WriteLine("Birthday: " + birthday);
+                outputFile.WriteLine("Contact Number: " + contactNumber);
+            }
+
+            MessageBox.Show("Successfully added as text file.");
+        }
     }
+    
 }

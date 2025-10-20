@@ -36,7 +36,7 @@ namespace ReadFileExercise
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-            frmRegistration.Show();
+            frmRegistration.ShowDialog();
             this.Hide();
         }
 
