@@ -50,6 +50,7 @@
             this.BirthdayPicker = new System.Windows.Forms.DateTimePicker();
             this.GenderCombo = new System.Windows.Forms.ComboBox();
             this.RegisterButton2 = new System.Windows.Forms.Button();
+            this.RecordsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // StudentNoLabel
@@ -259,13 +260,25 @@
             // 
             this.RegisterButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterButton2.Location = new System.Drawing.Point(456, 428);
+            this.RegisterButton2.Location = new System.Drawing.Point(475, 428);
             this.RegisterButton2.Name = "RegisterButton2";
-            this.RegisterButton2.Size = new System.Drawing.Size(156, 39);
+            this.RegisterButton2.Size = new System.Drawing.Size(137, 39);
             this.RegisterButton2.TabIndex = 16;
             this.RegisterButton2.Text = "REGISTER";
             this.RegisterButton2.UseVisualStyleBackColor = true;
             this.RegisterButton2.Click += new System.EventHandler(this.RegisterButton2_Click);
+            // 
+            // RecordsButton
+            // 
+            this.RecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecordsButton.Location = new System.Drawing.Point(326, 428);
+            this.RecordsButton.Name = "RecordsButton";
+            this.RecordsButton.Size = new System.Drawing.Size(137, 39);
+            this.RecordsButton.TabIndex = 30;
+            this.RecordsButton.Text = "<RECORDS";
+            this.RecordsButton.UseVisualStyleBackColor = true;
+            this.RecordsButton.Click += new System.EventHandler(this.RecordsButton_Click);
             // 
             // FrmRegistration
             // 
@@ -273,6 +286,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(638, 515);
+            this.Controls.Add(this.RecordsButton);
             this.Controls.Add(this.GenderCombo);
             this.Controls.Add(this.BirthdayPicker);
             this.Controls.Add(this.BirthdayLabel);
@@ -327,5 +341,6 @@
         private System.Windows.Forms.DateTimePicker BirthdayPicker;
         private System.Windows.Forms.ComboBox GenderCombo;
         private System.Windows.Forms.Button RegisterButton2;
+        private System.Windows.Forms.Button RecordsButton;
     }
 }

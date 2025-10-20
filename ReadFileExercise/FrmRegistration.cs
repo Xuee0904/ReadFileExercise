@@ -14,9 +14,13 @@ namespace ReadFileExercise
 
     public partial class FrmRegistration : Form
     {
+        FrmStudentRecord frmStudentRecord;
+
         public FrmRegistration()
         {
             InitializeComponent();
+
+            frmStudentRecord = new FrmStudentRecord();
 
             RegisterButton2.BackColor = ColorTranslator.FromHtml("#3A5A40");
             RegisterButton2.ForeColor = ColorTranslator.FromHtml("#DFE6DA");
@@ -74,6 +78,11 @@ namespace ReadFileExercise
             }
 
             MessageBox.Show("Successfully added as text file.");
+        }
+
+        private void RecordsButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
     
