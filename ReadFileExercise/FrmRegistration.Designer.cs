@@ -257,7 +257,7 @@
             // 
             // RegisterButton2
             // 
-            this.RegisterButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RegisterButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterButton2.Location = new System.Drawing.Point(456, 428);
             this.RegisterButton2.Name = "RegisterButton2";

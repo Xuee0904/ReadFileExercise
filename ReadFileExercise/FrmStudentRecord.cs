@@ -39,5 +39,10 @@ namespace ReadFileExercise
             frmRegistration.Show();
             this.Hide();
         }
+
+        private void UploadButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Successfully Uploaded! ^^");
+        }
     }
 }

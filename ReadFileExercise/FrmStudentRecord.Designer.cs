@@ -64,6 +64,7 @@
             this.UploadButton.TabIndex = 3;
             this.UploadButton.Text = "UPLOAD";
             this.UploadButton.UseVisualStyleBackColor = true;
+            this.UploadButton.Click += new System.EventHandler(this.UploadButton_Click);
             // 
             // FindButton
             // 
