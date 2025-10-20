@@ -86,6 +86,7 @@
             this.RegisterButton.TabIndex = 5;
             this.RegisterButton.Text = "REGISTER";
             this.RegisterButton.UseVisualStyleBackColor = true;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // FrmStudentRecord
             // 

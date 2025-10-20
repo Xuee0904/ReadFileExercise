@@ -12,9 +12,14 @@ namespace ReadFileExercise
 {
     public partial class FrmStudentRecord : Form
     {
+
+        FrmRegistration frmRegistration;
+
         public FrmStudentRecord()
         {
             InitializeComponent();
+
+            frmRegistration = new FrmRegistration();
 
             RegisterButton.BackColor = ColorTranslator.FromHtml("#3A5A40");
             RegisterButton.ForeColor = ColorTranslator.FromHtml("#DFE6DA");
@@ -27,6 +32,12 @@ namespace ReadFileExercise
         private void FrmStudentRecord_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml("#F3F3F3");
+        }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            frmRegistration.Show();
+            this.Hide();
         }
     }
 }
