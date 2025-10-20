@@ -36,7 +36,10 @@
             // 
             // ReadTextListView
             // 
+            this.ReadTextListView.Alignment = System.Windows.Forms.ListViewAlignment.Left;
+            this.ReadTextListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReadTextListView.HideSelection = false;
+            this.ReadTextListView.LabelWrap = false;
             this.ReadTextListView.Location = new System.Drawing.Point(30, 24);
             this.ReadTextListView.Name = "ReadTextListView";
             this.ReadTextListView.Size = new System.Drawing.Size(637, 330);
@@ -53,6 +56,7 @@
             this.NextButton.TabIndex = 1;
             this.NextButton.Text = "NEXT>";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // OpenButton
             // 

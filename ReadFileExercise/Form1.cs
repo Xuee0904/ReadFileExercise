@@ -13,9 +13,12 @@ namespace ReadFileExercise
 {
     public partial class FrmOpenTextFile : Form
     {
+        FrmStudentRecord frmStudentRecord;
         public FrmOpenTextFile()
         {
             InitializeComponent();
+
+            frmStudentRecord = new FrmStudentRecord();
 
             NextButton.BackColor = ColorTranslator.FromHtml("#3A5A40");
             NextButton.ForeColor = ColorTranslator.FromHtml("#DFE6DA");
@@ -50,6 +53,12 @@ namespace ReadFileExercise
         private void OpenButton_Click(object sender, EventArgs e)
         {
             DisplayToList(openFileDialog1.FileName);
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            frmStudentRecord.Show();
+            this.Hide();
         }
     }
 }
