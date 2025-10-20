@@ -31,6 +31,7 @@
             this.ReadTextListView = new System.Windows.Forms.ListView();
             this.NextButton = new System.Windows.Forms.Button();
             this.OpenButton = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // ReadTextListView
@@ -63,6 +64,11 @@
             this.OpenButton.TabIndex = 2;
             this.OpenButton.Text = "OPEN";
             this.OpenButton.UseVisualStyleBackColor = true;
+            this.OpenButton.Click += new System.EventHandler(this.OpenButton_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // FrmOpenTextFile
             // 
@@ -84,6 +90,7 @@
         private System.Windows.Forms.ListView ReadTextListView;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Button OpenButton;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
