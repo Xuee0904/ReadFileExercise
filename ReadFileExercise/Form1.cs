@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ReadFileExercise
 {
-    public partial class Form1 : Form
+    public partial class FrmOpenTextFile : Form
     {
-        public Form1()
+        public FrmOpenTextFile()
         {
             InitializeComponent();
+
+            NextButton.BackColor = ColorTranslator.FromHtml("#3A5A40");
+            NextButton.ForeColor = ColorTranslator.FromHtml("#DFE6DA");
+            OpenButton.BackColor = ColorTranslator.FromHtml("#3A5A40");
+            OpenButton.ForeColor = ColorTranslator.FromHtml("#DFE6DA");
+        }
+
+        private void FrmOpenTextFile_Load(object sender, EventArgs e)
+        {
+            this.BackColor = ColorTranslator.FromHtml("#F3F3F3");
         }
     }
 }
