@@ -1,6 +1,6 @@
 ﻿namespace ReadFileExercise
 {
-    partial class FrmRegistration
+    partial class FormRegistration
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,7 @@
             this.AgeText = new System.Windows.Forms.TextBox();
             this.ContactNoLabel = new System.Windows.Forms.Label();
             this.AgeLabel = new System.Windows.Forms.Label();
+            this.RegisterButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.BirthdayLabel = new System.Windows.Forms.Label();
             this.BirthdayPicker = new System.Windows.Forms.DateTimePicker();
             this.GenderCombo = new System.Windows.Forms.ComboBox();
-            this.RegisterButton2 = new System.Windows.Forms.Button();
             this.RecordsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -186,6 +186,18 @@
             this.AgeLabel.TabIndex = 10;
             this.AgeLabel.Text = "Age";
             // 
+            // RegisterButton
+            // 
+            this.RegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterButton.Location = new System.Drawing.Point(475, 429);
+            this.RegisterButton.Name = "RegisterButton";
+            this.RegisterButton.Size = new System.Drawing.Size(137, 39);
+            this.RegisterButton.TabIndex = 16;
+            this.RegisterButton.Text = "REGISTER";
+            this.RegisterButton.UseVisualStyleBackColor = true;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -256,23 +268,11 @@
             this.GenderCombo.Size = new System.Drawing.Size(287, 24);
             this.GenderCombo.TabIndex = 29;
             // 
-            // RegisterButton2
-            // 
-            this.RegisterButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegisterButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterButton2.Location = new System.Drawing.Point(475, 428);
-            this.RegisterButton2.Name = "RegisterButton2";
-            this.RegisterButton2.Size = new System.Drawing.Size(137, 39);
-            this.RegisterButton2.TabIndex = 16;
-            this.RegisterButton2.Text = "REGISTER";
-            this.RegisterButton2.UseVisualStyleBackColor = true;
-            this.RegisterButton2.Click += new System.EventHandler(this.RegisterButton2_Click);
-            // 
             // RecordsButton
             // 
             this.RecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RecordsButton.Location = new System.Drawing.Point(326, 428);
+            this.RecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecordsButton.Location = new System.Drawing.Point(326, 429);
             this.RecordsButton.Name = "RecordsButton";
             this.RecordsButton.Size = new System.Drawing.Size(137, 39);
             this.RecordsButton.TabIndex = 30;
@@ -280,11 +280,11 @@
             this.RecordsButton.UseVisualStyleBackColor = true;
             this.RecordsButton.Click += new System.EventHandler(this.RecordsButton_Click);
             // 
-            // FrmRegistration
+            // FormRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.ClientSize = new System.Drawing.Size(638, 515);
             this.Controls.Add(this.RecordsButton);
             this.Controls.Add(this.GenderCombo);
@@ -294,7 +294,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.RegisterButton2);
+            this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.ContactNoText);
             this.Controls.Add(this.AgeText);
             this.Controls.Add(this.ContactNoLabel);
@@ -309,7 +309,7 @@
             this.Controls.Add(this.LastNameLabel);
             this.Controls.Add(this.ProgramLabel);
             this.Controls.Add(this.StudentNoLabel);
-            this.Name = "FrmRegistration";
+            this.Name = "FormRegistration";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmRegistration_Load);
             this.ResumeLayout(false);
@@ -333,6 +333,7 @@
         private System.Windows.Forms.TextBox AgeText;
         private System.Windows.Forms.Label ContactNoLabel;
         private System.Windows.Forms.Label AgeLabel;
+        private System.Windows.Forms.Button RegisterButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -340,7 +341,6 @@
         private System.Windows.Forms.Label BirthdayLabel;
         private System.Windows.Forms.DateTimePicker BirthdayPicker;
         private System.Windows.Forms.ComboBox GenderCombo;
-        private System.Windows.Forms.Button RegisterButton2;
         private System.Windows.Forms.Button RecordsButton;
     }
 }

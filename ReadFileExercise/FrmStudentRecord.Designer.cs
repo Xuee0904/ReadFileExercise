@@ -33,6 +33,7 @@
             this.UploadButton = new System.Windows.Forms.Button();
             this.FindButton = new System.Windows.Forms.Button();
             this.RegisterButton = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -53,6 +54,7 @@
             this.listView1.Size = new System.Drawing.Size(637, 310);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.List;
             // 
             // UploadButton
             // 
@@ -76,6 +78,7 @@
             this.FindButton.TabIndex = 4;
             this.FindButton.Text = "FIND";
             this.FindButton.UseVisualStyleBackColor = true;
+            this.FindButton.Click += new System.EventHandler(this.FindButton_Click);
             // 
             // RegisterButton
             // 
@@ -88,6 +91,10 @@
             this.RegisterButton.Text = "REGISTER";
             this.RegisterButton.UseVisualStyleBackColor = true;
             this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // FrmStudentRecord
             // 
@@ -114,5 +121,6 @@
         private System.Windows.Forms.Button UploadButton;
         private System.Windows.Forms.Button FindButton;
         private System.Windows.Forms.Button RegisterButton;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

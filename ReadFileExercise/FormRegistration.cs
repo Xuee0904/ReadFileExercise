@@ -11,19 +11,16 @@ using System.Windows.Forms;
 
 namespace ReadFileExercise
 {
-
-    public partial class FrmRegistration : Form
+    partial class FormRegistration : Form
     {
-        FrmStudentRecord frmStudentRecord;
-
-        public FrmRegistration()
+        public FormRegistration()
         {
             InitializeComponent();
 
-            frmStudentRecord = new FrmStudentRecord();
-
-            RegisterButton2.BackColor = ColorTranslator.FromHtml("#3A5A40");
-            RegisterButton2.ForeColor = ColorTranslator.FromHtml("#DFE6DA");
+            RegisterButton.BackColor = ColorTranslator.FromHtml("#3A5A40");
+            RegisterButton.ForeColor = ColorTranslator.FromHtml("#DFE6DA");
+            RecordsButton.BackColor = ColorTranslator.FromHtml("#3A5A40");
+            RecordsButton.ForeColor = ColorTranslator.FromHtml("#DFE6DA");
 
             string[] ListOfPrograms = new string[]
             {
@@ -45,14 +42,10 @@ namespace ReadFileExercise
             GenderCombo.Items.Add("Male");
             GenderCombo.Items.Add("Female");
             GenderCombo.Items.Add("Unspecified");
+
         }
 
-        private void FrmRegistration_Load(object sender, EventArgs e)
-        {
-            this.BackColor = ColorTranslator.FromHtml("#F3F3F3");
-        }
-
-        private void RegisterButton2_Click(object sender, EventArgs e)
+        private void RegisterButton_Click(object sender, EventArgs e)
         {
             string studentNumber = StudentNoText.Text;
             string lastName = LastNameText.Text;
@@ -64,7 +57,7 @@ namespace ReadFileExercise
             string program = ProgramCombo.Text;
             string Gender = GenderCombo.Text;
 
-            string relativePath = @"..\..\ReadFileStorage";
+            string relativePath = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
             string docPath = Path.GetFullPath(relativePath);
             using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, studentNumber + ".txt")))
             {
@@ -80,10 +73,14 @@ namespace ReadFileExercise
             MessageBox.Show("Successfully added as text file.");
         }
 
+        private void FrmRegistration_Load(object sender, EventArgs e)
+        {
+            this.BackColor = ColorTranslator.FromHtml("#F3F3F3");
+        }
+
         private void RecordsButton_Click(object sender, EventArgs e)
         {
-
+            DialogResult = DialogResult.OK;
         }
     }
-    
 }
